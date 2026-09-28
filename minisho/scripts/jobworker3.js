@@ -8,7 +8,7 @@ function SendProgress(val){self.outputPort.postMessage({"type":"progress","jobId
 function OnDispatchWorkerMessage(e){
 
   const msg=e.data;
-    msg["scripts"] = ["https://cdn.jsdelivr.net/gh/faralong/all@main/minisho/redblackset.js", "https://cdn.jsdelivr.net/gh/faralong/all@main/minisho/pathfind.js"];
+    msg["scripts"] = ["https://raw.esm.sh/gh/1ts-Alec/all@2a0be0c4c0786006c6db36caf87099b373f5b97b/minisho/redblackset.js", "https://raw.esm.sh/gh/1ts-Alec/all@2a0be0c4c0786006c6db36caf87099b373f5b97b/minisho/pathfind.js"];
 
   
   const type=msg["type"];if(type==="_import_scripts"){importScripts(...msg["scripts"]);return}else if(type==="_send_blob"){self.sentBlobs.set(msg["id"],msg["blob"]);return}else if(type==="_send_buffer"){self.sentBuffers.set(msg["id"],msg["buffer"]);return}else if(type==="_ready"){SendReady();return}const jobId=msg["jobId"];const isBroadcast=msg["isBroadcast"];const params=msg["params"];let ret;self.activeJobId=jobId;if(!self.JobHandlers.hasOwnProperty(type)){console.error(`no handler for message type '${type}'`);

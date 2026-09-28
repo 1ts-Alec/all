@@ -68,7 +68,7 @@ function createUnityInstance(t, n, d) {
     e(n, "productVersion", "1.0"),
     n)
         l[o] = n[o];
-    l.streamingAssetsUrl = new URL(l.streamingAssetsUrl,"https://cdn.jsdelivr.net/gh/Pok12d/ta@main/deadlydescent/").href;
+    l.streamingAssetsUrl = new URL(l.streamingAssetsUrl,"https://raw.esm.sh/gh/Pok12d/ta@main/deadlydescent/").href;
     var i = l.disabledCanvasEvents.slice();
     function a(e) {
         e.preventDefault()

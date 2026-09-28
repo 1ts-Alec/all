@@ -68,7 +68,7 @@ function createUnityInstance(t, n, l) {
     e(n, "productVersion", "1.0"),
     n)
         u[o] = n[o];
-    u.streamingAssetsUrl = new URL(u.streamingAssetsUrl,"https://cdn.jsdelivr.net/gh/faralong/all@main/battlekarts/").href;
+    u.streamingAssetsUrl = new URL(u.streamingAssetsUrl,"https://raw.esm.sh/gh/1ts-Alec/all@2a0be0c4c0786006c6db36caf87099b373f5b97b/battlekarts/").href;
     var a = u.disabledCanvasEvents.slice();
     function i(e) {
         e.preventDefault()
